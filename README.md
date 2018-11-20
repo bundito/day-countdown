@@ -22,12 +22,15 @@ Using the card is simple. The only required parameter is `date`.
 This will generate the most basic card:
 
 
+![countdown](/countdown.png)
+
 
 `date` can be provided in either American or European format, with the month spelled out (or abbreviated). All of these are equivalent:
-- Apr 25 2019
-- 25 Apr 2019
-- April 25, 2019
-- 25 April 2019
+
+    - Jul 16 2019
+    - 16 Jul 2019
+    - July 16, 2019
+    - 16 july 2019
 
 **Note:** All-numeric dates (i.e. 04/25/19) are not supported at the moment. Javascript has a complicated relationship with dates. I'm working on it.
 
@@ -38,6 +41,8 @@ Adding the `title` parameter allows you to, well, change the title of the card.
     date: "July 16 2019"
     title: Anniversary
     
+![title](/title.png)
+    
 ### icon
 If you want a cute calendar icon, add in the `icon_size` parameter. You can choose the size, `small`, `medium`, or `large`.
 
@@ -47,6 +52,7 @@ If you want a cute calendar icon, add in the `icon_size` parameter. You can choo
       title: Anniversary
       icon_size: small
     
+![small](/small.png)
     
 #### medium
     - type: "custom:day-countdown"
@@ -54,12 +60,15 @@ If you want a cute calendar icon, add in the `icon_size` parameter. You can choo
       title: Anniversary
       icon_size: medium
     
+![medium](/medium.png)
     
 #### large
     - type: "custom:day-countdown"
       date: "July 16 2019"
       title: Anniversary
       icon_size: large
+      
+![large](/large.png)
     
 ### icon_url
 And finally, if you wish, you can add a link to the calendar icon. The link has no special formatting and is not checked for validity. That's up to you.
@@ -69,3 +78,8 @@ And finally, if you wish, you can add a link to the calendar icon. The link has 
       title: Anniversary
       icon_size: large
       icon_url: https://en.wikipedia.org/wiki/July_16
+
+## Notes & Attribution
+This card is more of a learning exercise for me, but it's fully functional and I intend to use it. As with all free software, you're welcome to revise or remix it in any way you wish. I may add more features later on, but for now, what you see is what you get. Enjoy.
+
+The calendar icon was made by Freepik from www.flaticon.com 
