@@ -34,9 +34,9 @@ This will generate the most basic card:
 ### title 
 Adding the `title` parameter allows you to, well, change the title of the card.
 
- - type: "custom:day-countdown"
-   date: "July 16 2019"
-   title: Anniversary
+  - type: "custom:day-countdown"
+    date: "July 16 2019"
+    title: Anniversary
     
 ### icon
 If you want a cute calendar icon, add in the `icon_size` parameter. You can choose the size, `small`, `medium`, or `large`.
