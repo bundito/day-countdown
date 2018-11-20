@@ -11,10 +11,13 @@ In your `ui-lovelace.yaml` file, add the following at the beginning of the file:
     - url: /local/day-countdown.js
         type: js
         
+        
+### date:
+
 Using the card is simple. The only required parameter is `date`.
 
     - type: "custom:day-countdown"
-      date: "02 February 2019"
+      date: "July 16 2019"
       
 This will generate the most basic card:
 
@@ -27,4 +30,41 @@ This will generate the most basic card:
 - 25 April 2019
 **Note:** All-numeric dates (i.e. 04/25/19) are not supported at the moment. Javascript has a complicated relationship with dates. I'm working on it.
 
-## 
+### title 
+Adding the `title` parameter allows you to, well, change the title of the card.
+
+ - type: "custom:day-countdown"
+    date: "July 16 2019"
+    title: Anniversary
+    
+### icon
+If you want a cute calendar icon, add in the `icon_size` parameter. You can choose the size, `small`, `medium`, or `large`.
+
+#### small
+- type: "custom:day-countdown"
+   date: "July 16 2019"
+   title: Anniversary
+   icon_size: small
+    
+    
+#### medium
+- type: "custom:day-countdown"
+    date: "July 16 2019"
+    title: Anniversary
+    icon_size: medium
+    
+    
+#### large
+- type: "custom:day-countdown"
+    date: "July 16 2019"
+    title: Anniversary
+    icon_size: large
+    
+### icon_url
+And finally, if you wish, you can add a link to the calendar icon. The link has no special formatting and is not checked for validity. That's up to you.
+
+- type: "custom:day-countdown"
+    date: "July 16 2019"
+    title: Anniversary
+    icon_size: large
+    icon_url: 
