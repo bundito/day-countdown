@@ -59,7 +59,8 @@ class DayCountdown extends HTMLElement {
   setConfig(config) {
     if (!config.date) {
       throw new Error('You need to provide a date or all of this is pointless!');
-    } this.config = config;
+    } 
+    this.config = config;
     
     this.config.px = 0;
 
@@ -117,7 +118,17 @@ class DayCountdown extends HTMLElement {
                    ];
        return iconData[iconNum];
       }
-      this.config.iconData = getIconData(this.config.icon_number - 1);
+
+      // did someone forget the 'icon_number' parameter? Default to the first.
+
+      var icon_num = 1;
+      if (!this.config.icon_number) {
+        icon_num = 1;
+      }  else {
+        icon_num = this.config.icon_number;
+      }
+      this.config.iconData = getIconData(icon_num - 1);
+      
 
   } // end of setConfig
 
