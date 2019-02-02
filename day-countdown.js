@@ -94,7 +94,7 @@ class DayCountdown extends HTMLElement {
       if (now < then){
         this.config.phrase = "Days Remaining";
 	  }else if (then < now){
-		this.config.phrase = "Days since " + then.getDay() + '/' + then.getMonth() + '/' + then.getFullYear();
+		this.config.phrase = "Days since " + then.toLocaleDateString();
 	  }
     }
 
