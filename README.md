@@ -1,3 +1,5 @@
+# NOTE: As of April 1, 2019, I am no longer participating in Home Assistant development (or usage). If there are any problems with this card going forward, I will not be able to fix them. Hope you enjoy!
+
 # Day Countdown card (v1.5)
 
 A simple Lovelace card for displaying a countdown until a certain date. Other than that, it doesn't do much. It's got a few options you can experiment with, however.
