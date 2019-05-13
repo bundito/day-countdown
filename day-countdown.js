@@ -27,12 +27,22 @@ class DayCountdown extends HTMLElement {
     function date_diff() {
       var now = new Date();
       var then = new Date(target);
-      var timeDiff = Math.abs(then.getTime() - now.getTime());
-      var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
-      if (then.getTime() < now.getTime()) {
-        diffDays = diffDays * -1;
-      }
-      return diffDays;
+      if (now < then){
+		  var timeDiff = Math.abs(then.getTime() - now.getTime());
+          var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
+          if (then.getTime() < now.getTime()) {
+            diffDays = diffDays * -1;
+          }
+          return diffDays;
+	  }else if (then < now){
+		  var timeDiff = Math.abs(now.getTime() - then.getTime());
+          var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24) - 1);
+          if (now.getTime() < then.getTime()) {
+            diffDays = 5;
+          }
+          return diffDays;
+	  }
+		  
     }
     
     const days = date_diff();
@@ -78,7 +88,14 @@ class DayCountdown extends HTMLElement {
       }
 
     if (!this.config.phrase) {
-      this.config.phrase = "Days Remaining";
+	  var now = new Date();
+      var then = new Date(this.config.date);
+	  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      if (now < then){
+        this.config.phrase = "Days Remaining";
+	  }else if (then < now){
+		this.config.phrase = "Days since " + then.toLocaleDateString();
+	  }
     }
 
     // determine icon size
